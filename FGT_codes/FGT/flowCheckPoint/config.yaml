@@ -1,0 +1,11 @@
+PASSMASK: 1
+cnum: 48
+conv_type: vanilla
+flow_interval: 1
+in_channel: 3
+init_weights: 1
+num_flows: 1
+resBlocks: 1
+use_bias: 1
+use_residual: 1
+model: lafc_single

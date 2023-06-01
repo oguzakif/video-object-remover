@@ -1,0 +1,11 @@
+# dataset general info
+frame_path: youtubevos_frames
+flow_path: youtubevos_flows
+name2len: config/youtubevos_name2len.pkl
+
+flow:
+  flow_height: 240
+  flow_width: 432
+  augments: False
+  colors: RGB
+  ext: .jpg
