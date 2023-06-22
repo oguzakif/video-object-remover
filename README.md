@@ -8,8 +8,10 @@
 ## Examples
   |   |   |
 :-------------------------:|:-------------------------:
-![Bmx-Trees](Figures/Examples/bmx-trees/original.gif) |  ![Bmx-Trees-Inpainted](Figures/Examples/bmx-trees/inpainted.gif)
-![Car-Shadow](Figures/Examples/car-shadow/original.gif)  |  ![Car-Shadow](Figures/Examples/car-shadow/inpainted.gif)
+<img src="Figures/Examples/bmx-trees/original.gif" width="854" height="480"/> |  <img src="Figures/Examples/bmx-trees/inpainted.gif" width="854" height="480"/>
+<img src="Figures/Examples/car-shadow/original.gif" width="854" height="480"/>  |  <img src="Figures/Examples/car-shadow/inpainted.gif" width="854" height="480"/>
+
+
 
 ## Introduction
 - Video object remover provides an easy object remover process for all types of users.
