@@ -8,8 +8,8 @@
 ## Examples
   |   |   |
 :-------------------------:|:-------------------------:
-<img src="Figures/Examples/bmx-trees/original.gif" width="854" height="480"/> |  <img src="Figures/Examples/bmx-trees/inpainted.gif" width="854" height="480"/>
-<img src="Figures/Examples/car-shadow/original.gif" width="854" height="480"/>  |  <img src="Figures/Examples/car-shadow/inpainted.gif" width="854" height="480"/>
+<img src="Figures/Examples/bmx-trees/original.gif" width="480" height="270"/> |  <img src="Figures/Examples/bmx-trees/inpainted.gif" width="480" height="270"/>
+<img src="Figures/Examples/car-shadow/original.gif" width="480" height="270"/>  |  <img src="Figures/Examples/car-shadow/inpainted.gif" width="480" height="270"/>
 
 
 
