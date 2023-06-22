@@ -42,8 +42,6 @@ siammask = load_pretrain(siammask, pretrained_path1)
 siammask = siammask.eval().to(device)
 
 parser = argparse.ArgumentParser()
-# parser.add_argument('--opt', default='configs/object_removal.yaml',
-#                     help='Please select your config file for inference')
 parser.add_argument('--opt', default=os.path.abspath(join(project_name, 'FGT_codes', 'tool','configs','object_removal.yaml')),
                     help='Please select your config file for inference')
 # video completion
@@ -64,8 +62,6 @@ parser.add_argument('--Nonlocal', dest='Nonlocal',
                     default=False, type=bool)
 
 # RAFT
-# parser.add_argument(
-#     '--raft_model', default='../LAFC/flowCheckPoint/raft-things.pth', help="restore checkpoint")
 parser.add_argument(
     '--raft_model', default=os.path.abspath(join(project_name, 'FGT_codes', 'LAFC','flowCheckPoint','raft-things.pth')), help="restore checkpoint")
 parser.add_argument('--small', action='store_true', help='use small model')
@@ -75,11 +71,9 @@ parser.add_argument('--alternate_corr', action='store_true',
                     help='use efficent correlation implementation')
 
 # LAFC
-# parser.add_argument('--lafc_ckpts', type=str, default='../LAFC/checkpoint')
 parser.add_argument('--lafc_ckpts', type=str, default=os.path.abspath(join(project_name, 'FGT_codes', 'LAFC','checkpoint')))
 
 # FGT
-# parser.add_argument('--fgt_ckpts', type=str, default='../FGT/checkpoint')
 parser.add_argument('--fgt_ckpts', type=str, default=os.path.abspath(join(project_name, 'FGT_codes', 'FGT','checkpoint')))
 
 
@@ -274,8 +268,6 @@ with gr.Blocks() as demo:
         with gr.Column(scale=2):
             out_video = gr.Video(label="Segmented Video", show_progress=True)
             out_video_inpaint = gr.Video(label="Inpainted Video", show_progress=True)
-            # track_mask = gr.Button(value="Track and Mask")
-            # inpaint = gr.Button(value="Inpaint")
 
     in_video.change(fn=get_first_frame, inputs=[
                     in_video], outputs=[first_frame])
@@ -285,10 +277,5 @@ with gr.Blocks() as demo:
     masked_image.change(fn=track_and_mask,inputs=[
                      in_video, masked_image, original_frame_list, mask_list, in_fps, dt_string], outputs=[original_frame_list, mask_list, in_fps, out_video])
     out_video.change(fn=inpaint_video, inputs=[original_frame_list, mask_list, in_fps, dt_string], outputs=[out_video_inpaint, original_frame_list, mask_list])
-    # track_mask.click(fn=track_and_mask, inputs=[
-    #                  in_video, masked_image, original_frame_list, mask_list, in_fps, dt_string], outputs=[original_frame_list, mask_list, in_fps, out_video])
-    # inpaint.click(fn=inpaint_video, inputs=[original_frame_list, mask_list, in_fps, dt_string],
-    #               outputs=[out_video_inpaint, original_frame_list, mask_list])
-
 
 demo.launch(debug=True)
